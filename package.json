@@ -1,0 +1,10 @@
+{
+  "name": "nubehost",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Starter de plataforma de publicación web con Netlify y Supabase",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.57.0",
+    "busboy": "^1.6.0"
+  }
+}

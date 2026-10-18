@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101311"><title>NubeHost — Hosting web</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="/"><span class="brand-mark">N</span><span>NubeHost</span></a>
+  <nav><a href="#como-funciona">Cómo funciona</a><a href="#panel">Panel</a></nav>
+  <button class="button button-quiet" id="logoutBtn" hidden>Cerrar sesión</button>
+</header>
+<main>
+  <section class="hero">
+    <div class="eyebrow"><span class="pulse"></span> HOSTING PARA TUS PROYECTOS</div>
+    <h1>Tu próximo sitio.<br><span>En línea.</span></h1>
+    <p class="hero-copy">Subí tu proyecto web, publicalo y compartí el enlace. Todo desde un panel sencillo, incluso desde tu celular.</p>
+    <div class="hero-actions"><a class="button button-primary" href="#panel">Abrir mi panel <span>↗</span></a><a class="button button-quiet" href="#como-funciona">Cómo funciona</a></div>
+    <div class="hero-note"><span class="check">✓</span> HTML, CSS, JavaScript y proyectos estáticos</div>
+  </section>
+
+  <section class="panel-section" id="panel">
+    <div class="section-heading"><div><div class="eyebrow">TU ESPACIO</div><h2>Panel de control</h2></div><span class="status-pill"><span class="pulse"></span> Preparado para publicar</span></div>
+    <div class="panel-card" id="authCard">
+      <div class="card-icon">↗</div><h3>Entrá a tu cuenta</h3>
+      <p>Usá tu cuenta de Supabase para administrar tus publicaciones.</p>
+      <form id="authForm">
+        <label for="email">Correo electrónico</label><input id="email" type="email" autocomplete="email" required placeholder="vos@ejemplo.com">
+        <label for="password">Contraseña</label><input id="password" type="password" autocomplete="current-password" required minlength="8" placeholder="Mínimo 8 caracteres">
+        <div class="form-actions"><button class="button button-primary" type="submit" id="loginBtn">Iniciar sesión</button><button class="button button-quiet" type="button" id="signupBtn">Crear cuenta</button></div>
+        <p class="hint">La primera cuenta debe ser autorizada como propietaria en Supabase antes de poder publicar.</p>
+      </form>
+      <p class="message" id="authMessage" role="status"></p>
+    </div>
+
+    <div class="dashboard" id="dashboard" hidden>
+      <div class="welcome-row"><div><h3>Mis proyectos</h3><p id="welcomeText">Tus sitios publicados aparecerán acá.</p></div><span class="count" id="projectCount">0 sitios</span></div>
+      <form id="deployForm" class="upload-card">
+        <div class="upload-title"><span class="upload-symbol">＋</span><div><h3>Publicar un proyecto</h3><p>Elegí un ZIP o los archivos de tu web.</p></div></div>
+        <label for="projectName">Nombre del proyecto</label><input id="projectName" maxlength="40" required placeholder="mi-primer-sitio">
+        <div class="upload-options">
+          <label class="file-choice"><input type="radio" name="uploadMode" value="zip" checked><span class="file-icon">ZIP</span><strong>Archivo ZIP</strong><small>Para proyectos completos</small><input id="zipFile" type="file" accept=".zip,application/zip"></label>
+          <label class="file-choice"><input type="radio" name="uploadMode" value="files"><span class="file-icon">HTML</span><strong>Archivos individuales</strong><small>HTML, CSS, JS, imágenes</small><input id="individualFiles" type="file" multiple accept=".html,.htm,.css,.js,.json,.txt,.svg,.png,.jpg,.jpeg,.webp,.gif,.ico,.woff,.woff2,.map"></label>
+        </div>
+        <p class="hint">Para un sitio estático, el ZIP debe contener index.html en la raíz (o dentro de una carpeta principal). No subas claves, contraseñas ni archivos privados.</p>
+        <button class="button button-primary full" type="submit" id="deployBtn">Publicar sitio <span>↗</span></button>
+        <p class="message" id="deployMessage" role="status"></p>
+      </form>
+      <div class="projects-list" id="projectsList"></div>
+    </div>
+  </section>
+
+  <section class="how" id="como-funciona">
+    <div class="eyebrow">SIMPLE Y DIRECTO</div><h2>De archivo a sitio publicado</h2>
+    <div class="steps">
+      <article><span>01</span><h3>Subí</h3><p>Elegí un ZIP o seleccioná los archivos desde tu teléfono.</p></article>
+      <article><span>02</span><h3>Publicá</h3><p>NubeHost valida tu cuenta y envía los archivos al servicio de despliegue.</p></article>
+      <article><span>03</span><h3>Compartí</h3><p>Copiá el enlace público de tu proyecto y compartilo.</p></article>
+    </div>
+  </section>
+</main>
+<footer><a class="brand" href="/"><span class="brand-mark">N</span><span>NubeHost</span></a><span>Hecho para publicar ideas.</span></footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/app.js"></script>
+</body></html>
