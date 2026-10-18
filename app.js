@@ -1,6 +1,6 @@
 /* NubeHost starter. Public frontend only; never put Netlify tokens here. */
-const SUPABASE_URL = ""; // Add your Supabase Project URL
-const SUPABASE_ANON_KEY = ""; // Add your Supabase anon/publishable key (not service_role)
+const SUPABASE_URL = "sb_publishable_8hhCSqZg0tyHg-ynAv45dA_A4szED2e"; // Add your Supabase Project URL
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVqYWZ6eHZ4a3pqdW90YnR2b3hmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTIyNjQ1MTIsImV4cCI6MjEwNzg0MDUxMn0.SGRJLxZoYxGmmej6UQe-uK87WjjBOXwVN5g0BuKJzAg"; // Add your Supabase anon/publishable key (not service_role)
 const sbReady = Boolean(SUPABASE_URL && SUPABASE_ANON_KEY && window.supabase);
 const sb = sbReady ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
 const $ = (id) => document.getElementById(id);
