@@ -3,7 +3,7 @@
    Nunca pongas tokens secretos de Netlify aquí.
 */
 
-const SUPABASE_URL = "sb_publishable_8hhCSqZg0tyHg-ynAv45dA_A4szED2e";
+const SUPABASE_URL = "https://ujafzxvxkzjuotbtvoxf.supabase.co";
 const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVqYWZ6eHZ4a3pqdW90YnR2b3hmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTIyNjQ1MTIsImV4cCI6MjEwNzg0MDUxMn0.SGRJLxZoYxGmmej6UQe-uK87WjjBOXwVN5g0BuKJzAg";
 
 const $ = (id) => document.getElementById(id);
